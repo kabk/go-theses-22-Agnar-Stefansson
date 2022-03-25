@@ -1,0 +1,595 @@
+@charset "UTF-8";
+
+
+
+/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
+
+@font-face {
+    font-family: 'century-old-style-std', serif;;
+    @import: url("https://use.typekit.net/nso0hmt.css");
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+
+}
+
+@font-face {
+    font-family: degular, sans-serif;;
+    @import: url("https://use.typekit.net/nso0hmt.css");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+
+}
+
+@font-face {
+  font-family: 'swear-display', serif;
+  @import: url("https://use.typekit.net/nso0hmt.css");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+
+
+
+/* VARIABLES */
+
+:root {
+  /* Color settings */
+  --color-background: #fffaee;
+  --color-text: #25150b;
+  --color-text-link: #c47a3b;
+  --color-text-link-hover: 442723;
+  /* Font settings */
+  --font-family: 'swear-display','century-old-style-std', degular, 'Arial', sans-serif;
+  --font-family-body: 'century-old-style-std', 'Arial', sans-serif;
+  --font-size-body: 80%;
+  --font-size-head: 38px;
+  /* Margins settings */
+  --margin: 1rem;
+}
+
+
+
+/* GENERAL STYLES */
+
+html {
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  scroll-behavior: smooth;
+}
+
+body {
+  position:relative;
+  background-color: var(--color-background);
+  font: var(--font-size-body) var(--font-family);
+  color: var(--color-text);
+  width:100%;
+  height:100%;
+  overflow-y:auto;
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-text-link-hover);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  color: var(--color-text-link-hover);
+  text-decoration: none;
+}
+
+h1{
+  /* h1 style */
+
+
+}
+
+.title h1{
+  font-size: 20vw;
+  word-spacing: -1vw;
+  font: var(--font-size-head*3) var(--font-family);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 8rem;
+  margin-bottom: 0;
+  z-index: 1;
+  }
+
+.title img{
+  position: absolute;
+  left: 50%;
+  padding-top: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 45vw;
+
+}
+
+
+h2{
+  /* h2 style */
+  font: var(--font-size-head) var(--font-family);
+  font-weight: 700;
+
+}
+
+h3{
+  /* h3 style */
+  font: var(--font-size-head) var(--font-family);
+  font-weight: 700;
+
+}
+
+h4, h5, h6{
+  /* h4-h5-h6 style */
+  font: var(--font-size-head) var(--font-family);
+  font-weight: 700;
+
+}
+
+p{
+  /* paragraph style */
+  font: var(--font-size-body) var(--font-family-body);
+  line-height: 1.2rem;
+
+}
+
+.quote p{
+  font: var(--font-size-head) var(--font-family);
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--font-size-body);
+}
+
+ol, ul{
+  /* ordered list and unordered list styles */
+  list-style-type: none;
+
+}
+
+blockquote{
+  /* blockquote element style */
+}
+
+hr{
+  /* horizontal rule style */
+}
+
+
+
+/* PAGE STYLES */
+
+/* page structure */
+
+div.page-wrapper {
+  /* the element that 'wraps' everything */
+  padding: var(--margin);
+}
+
+/* navigation */
+ 
+nav{
+  
+}
+
+/* content */
+header{
+  text-align: center;
+}
+
+.title{
+  margin-bottom: 1000px;
+}
+
+.toc{
+  text-align: center;
+  margin-bottom: 13rem;
+}
+
+.toc li{
+  margin-bottom: 1rem;
+  text-decoration: none;
+
+}
+
+
+main{
+  position: relative;
+  float: left;
+  margin-left: 2%;
+  margin-right: 15%;
+ 
+}
+.container{
+  width: 100%;
+}
+
+.footnotes{
+  order: 1; /* default is 0 */
+  position: sticky;
+  top: 0;
+  height: 100%;
+  padding-top: 3rem;
+  /* background-color: aqua; */
+
+}
+
+.footnote{
+  margin-bottom: 1rem;
+}
+
+#f1{
+
+}
+
+footer{
+  position: relative;
+  /* width: 100%; */
+  float: left;
+}
+
+.abstract{
+    margin-left: 15vw;
+    margin-bottom: 15rem;  
+}
+
+.abstract p{
+  font-size: 12pt;
+  line-height: 1.2rem;
+  column-count: 2;
+}
+
+.subtitle{
+  text-align: center;
+}
+
+
+.abstract h2{
+text-align: center;
+}
+
+.intro{
+  margin-left: 15vw;
+  margin-bottom: 15rem;
+}
+
+#text{
+
+}
+
+.text{
+  order: 2;
+  width: 100%;
+}
+
+.text p{
+}
+
+.chapter{
+  display: flex;
+  margin-bottom: 15rem;
+  /* width: 100%; */
+}
+
+.chapter h2{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+
+.chapter-image{
+margin-left: 25vw;
+width: 50vw;
+opacity: 0.6;
+z-index: -1;
+align-items: center;
+}
+
+.chapter2 img{
+  /* position: relative;
+  float: right; */
+}
+
+.imgpar{
+  background-color: aquamarine;
+
+}
+
+.imginpar{
+  position: relative;
+  float: right;
+  height: 100%;
+  width: 20vw;
+}
+
+.imginpar img{
+width: 20vw;
+}
+
+.textinpar{
+  padding-right: 25vw;
+}
+
+.imgpar img{
+  /* position: sticky; */
+  /* top: 0; */
+  float: right;
+}
+
+.imgpar figcaption{
+  /* float: right; */
+}
+.imginpar{
+  /* float: right; */
+
+}
+
+figcaption{
+  padding-top: 5px;
+  font-size: 12pt;
+  padding-bottom: 5px;
+}
+
+
+#code{
+  font-family: monospace;
+}
+
+.bio{
+  margin-left: 5rem;
+}
+
+.bio li{
+  list-style: none;
+  font-size: 60%;
+  line-height: 1rem;
+}
+
+.rellax{
+  /* position: relative;
+  float: right; */
+  
+}
+
+#img2{
+}
+
+
+
+/* GENERAL USABILITY */
+
+/* hide desktop mobile etc */
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+/* if you want to hide something visually but want to keep it readable / accessible for screen readers (sr) */
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+/* responsive typeface */
+
+@media (max-width: 298px) { 
+  :root{ --font-size: 15px; } html, body {font: var(--font-size) var(--font-family);} 
+}
+@media (min-width: 299px) and (max-width: 339px) { 
+  :root{ --font-size: 16px; } html, body {font: var(--font-size) var(--font-family);} 
+}
+@media (min-width: 340px) and (max-width: 439px) { 
+  :root{ --font-size: 17px; } html, body {font: var(--font-size) var(--font-family);} 
+}
+@media (min-width: 440px) and (max-width: 599px) { 
+  :root{ --font-size: 18px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 600px) and (max-width: 779px) { 
+  :root{ --font-size: 19px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 780px) and (max-width: 992px) { 
+  :root{ --font-size: 20px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 993px) and (max-width: 1200px) { 
+  :root{ --font-size: 22px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1201px) and (max-width: 1319px) { 
+  :root{ --font-size: 24px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1320px) and (max-width: 1619px) { 
+  :root{ --font-size: 26px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1620px) and (max-width: 1879px) { 
+  :root{ --font-size: 28px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1880px) { 
+  :root{ --font-size: 30px; } html, body {font: var(--font-size) var(--font-family);}
+}
+
+
+
+/* website media queries */
+
+@media (max-width: 779px) {
+
+  /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */
+  /* style this one first and then use the two others to 'override' some styles (exceptions/details) */
+ 
+  .title h1{
+    font-size: 20vw;
+    word-spacing: -1vw;
+    padding-top: 10rem;
+    font: var(--font-size-head*3) var(--font-family);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 3rem;
+    margin-bottom: 0;
+    z-index: 1;
+    }
+
+    .title img{
+      position: absolute;
+      left: 50%;
+      padding-top: 50rem;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      width: 45vw;
+    
+    }
+  
+
+  .abstract{
+    margin-left: 1rem;
+    margin-bottom: 1rem;  
+}
+
+.abstract p{
+  font-size: 12pt;
+  line-height: 1.2rem;
+  column-count: 1;
+}
+
+.intro{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+main{
+  width: 100%;
+}
+
+.abstract{
+margin-left: 1vw;
+margin-right: 1vw;
+}
+
+  .footnotes{
+    position:fixed;
+    display:block;
+    width: 100%;
+    height: 4rem;
+    margin:0;padding:0;
+    bottom:0;
+    left: 0;
+    top: initial;
+
+    z-index: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: white;
+    background-color: yellow;
+
+  }
+
+  .footnote-container{
+    position:relative;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap:nowrap;
+    width:auto;
+    height:100%;
+    padding: 1rem;
+    background-color: red;
+    
+  }
+
+  .footnote{
+    position: relative;
+    order: initial; /* default is 0 */
+    top: initial;
+    height: auto;
+    width: 50vw;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+    background-color: aqua;
+    background-repeat: repeat-x;
+
+  }
+
+  .title{
+    text-align: center;
+  }
+
+  .imginpar{
+    position: relative;
+    float: left;
+    align-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+
+  .textinpar{
+    margin-left: 1rem;
+    padding-right: 0;
+    margin-right: 1rem;
+  }
+  
+  .imginpar img{
+  width: 80vw;
+  }
+  
+  /* utilities */
+
+  .desktop{display:none!important;}
+  .mobile{display:block;}
+
+}
+
+
+
+@media (max-width: 339px) {
+
+  /* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
+
+}
+
+
+
+@media (max-width: 779px) and (orientation: landscape) {
+
+  /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
+
+}
+
+
+
+@media (min-width: 780px) and (max-width: 992px) {
+
+  /* use this query to apply style for 'small' desktop screens */
+
+}
+
+

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<!-- meta tags, fill them with website meta infos -->
+	<meta name="description" content="Thesis website" />
+	<meta name="keywords" content="Knitting, Creative code, Value, Arts and crafts, selburose ..." />
+	<meta name="author" content="Agnar Freyr Stefánsson" />
+
+	<!-- favicons -->
+	<!--
+	very minimal use of favicon with a 512x512px .png favicon, 
+	use 'https://www.favicon-generator.org' to generate a more extensive favicon code 
+-->
+	<link rel="icon" href="assets/images/favicon/favicon.png" sizes="32x32" />
+	<link rel="icon" href="assets/images/favicon/favicon.png" sizes="192x192" />
+
+	<!-- meta properties for social medias, twitter = twitter, og:... = facebook -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="The Value of a Rose by Agnar Freyr Stefánsson">
+	<meta name="twitter:description" content="Graphic Design Bachelor Thesis Spring 2022">
+	<meta property="twitter:image:src" content="assets/images/imageforsocialmedias.jpg">
+	<meta property="og:title" content="The Value of a Rose by Agnar Freyr Stefánsson" />
+	<meta property="og:url" content="http://www.mywebsite.com/mywebpage" />
+	<meta property="og:description" content="Graphic Design Bachelor Thesis Spring 2022" />
+	<meta property="og:image" content="assets/images/imageforsocialmedias.jpg" />
+
+	<!-- website title, visible in the browser window and on link sharing -->
+	<title>The Value of a Rose by Agnar Freyr Stefánsson</title>
+
+	<!-- links for extensions and dependencies -->
+
+	<!-- css -->
+	<!-- normalize 'resets' some browser properties to make them look the same across browsers -->
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/master.css?ver=1.1">
+
+	<!-- js -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+	<script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+	<script type="text/javascript" src="assets/js/rellax.min.js"></script>
+	<script type="text/javascript" src="assets/js/rellax.js"></script>
+	<script type="text/javascript" src="assets/js/functions.js"></script>
+
+	<!-- partial -->
+
+	<style>
+		@import url("https://use.typekit.net/nso0hmt.css");
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="title">
+			<div class="rellax" data-rellax-speed="5" data-rellax-percentage="1" data-rellax-zindex="1" data-rellax-mobile-speed="-1"			>
+				<img src="content/images/selburose3" alt="rose">
+			</div>
+			<h1 class="one rellax" data-rellax-speed="4"> The Value of a Rose</h1>
+			<p>The many layers of woven patterns, knitting and computer generated art</p>
+
+		</div>
+		</div>
+	</header>
+	<div class="toc">
+		<nav>
+			<h2>Table of Content</h2>
+			<ul>
+				<li><a href="#intro">Intro</a></li>
+				<li><a href="#c1"><strong>I</strong> <br> Does it compute?</a></li>
+				<li><a href="#c2"><strong>II</strong> <br> Seeing a Pattern</a></li>
+				<li><a href="#c3"><strong>III</strong> <br> C'est ne pas une rose</a></li>
+				<li><a href="#c4"><strong>VI</strong> <br> A rose is a rose is a rose</a></li>
+				<li><a href="#Bibliography">Bibliography</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="page-wrapper">
+
+		<main>
+			<div class="container">
+
+				<div class="abstract">
+					<h2 class="subtitle" id="abstract">Abstract</h2>
+					<p>
+						After developing a knitting pattern program which generates patterns in 2021 I have wanted to
+						know if my patterns would ever reach the same cultural appreciation similar to the classic
+						knitting patterns of the past like the eight-leafed rose known as the ‘Selburose’. This ancient
+						form can be found in a stamp-seal created in the Mesopotamia around 2000BC - 1000BC. But is the
+						value of the rose found in its history and could a computer generated rose reach similar
+						cultural validation?
+						By looking at the Selburose’s blurry historical significance and the evolving relationship
+						between humans and machines through knitting, I am able to weave the history of knitting with
+						its transformation towards industrialisation, the consequential ‘Arts and crafts movement’
+						revolt against the machine which shaped the current view people have of artworks created by a
+						computer today. In the process I unveil the common approach to knitting and programming as well
+						as merge the art of code with the tradition of encoding stories into patterns and diving deep
+						into their visual similarities.
+						The book ‘Sense of order: A study in psychology of decorative art’ has been my primary source
+						for historical references of ornamental art and the book “Form + Code: In Design, Art and
+						Architecture” has shed a light on the history of code and computers and its use in the creative
+						field. The artwork of Phillip Stearns called “Fragmented Memory” (2013) has been a great case
+						study for my arguments where the many disciplines of code, computer, machine, textile and art
+						are merged into one. Throughout my research I’ve been using historical- and exploratory research
+						and qualitative methods.
+						After discovering that the meaning behind the Selburose is mostly lost through time and other
+						meanings have been adopted throughout history, it gave me space to reinvent how we put meaning
+						into patterns. It is unfair to pin a computer generated ‘selburose’ against its handmade
+						counterpart. Viewing them as separate entities it is easier to appreciate each rose on their
+						own. The semiotic meaning of the selburose and its survival through the decades and the
+						computer-generated one for its hidden meaning and human innovation in technology and computers,
+						making code a contemporary tool to aid in art and design.
+					</p>
+				</div>
+
+				<div class="intro" id="text">
+
+					<h2 class="subtitle" id="intro">Intro</h2>
+					<p>As you read this text, and depending on the season there is a high chance you might be wearing a
+						knitted garment, or at least you own one. The garment stored in your closet was most likely made
+						by a mechanical knitting machine, knitting rows and rows of yarn in minutes. Some are lucky to
+						have handmade garments, painstakingly knitted by hand one knit at a time. Whether they were
+						knitted by a human or a machine they both follow the same logic. ‘One plain and one purl’ is the
+						most common knitting pattern there is. It could also be only knitted in two colours. This binary
+						way of thinking is most often associated with the computer where bits are organised into 1 or 0,
+						‘On’ or ‘Off’. With this common language of knitting, textiles and coding it is possible to
+						explore the different ways we perceive artworks made through these different mediums, both on
+						their own but also together. </p>
+					<p>In what way are traditional knitting patterns better than computer-generated ones? Are
+						traditional knitting patterns better than computer-generated ones?</p>
+					<p>After seeing the selburose - a common knitting pattern - it is easy to translate the black and
+						white boxes into pixels. By using the common binary language of knitting and coding, what can
+						this ancient knitting pattern tell us about the way we see computer-generated art today? </p>
+					<p>Throughout history, knitting has changed importance, from being the only way farmers had warm
+						clothes without having to kill their life stock for their wool and skin. Knitting has become a
+						pass-time just as coding is becoming a pass time. Both need a considerate amount of
+						concentration, patients and craftsmanship. At the intersection of these two hobbies lies an
+						interesting observation that is often overlooked but has been utilised by a certain number of
+						artists.</p>
+
+				</div>
+
+				<!-- CHAPTER 1 -->
+				<div class="rellax" data-rellax-speed="-3" data-rellax-percentage="1" data-rellax-zindex="5">
+
+					<img class="chapter-image" src="content/images/chapter_one_2" alt="c1" opacity: 0.5;>
+
+				</div>
+				<div class="chapter" id="c1">
+					<div class="text" id="chapter-1">
+						<h2 class="subtitle" id="c1">I<br> Does it compute?</h2>
+
+						<p>
+							Knitting has been a part of every major culture.<sup><a href="#fn1" id="ref1">1</a></sup>
+							The oldest examples of knits have been found in Egypt dated to the 12th century.<sup><a
+									href="#fn2" id="ref2">2</a></sup> It is suggested that the craft travelled through
+							North-Africa to Spain and the rest of Europe. Knitting reached Iceland’s shores around the
+							16th century which is indicated by the oldest preserved items found in the National Museum
+							of Iceland. It has also been a strong part of their national identity since then. With its
+							ability to come together, care for each other, clothe and tell stories and history with and
+							through the knits. Everybody on the farm would participate in the knitting process. From
+							shearing the wool, spinning it into thread and knitting it into garments.<sup><a href="#fn3"
+									id="ref3">3</a></sup>
+							In those days wool was sheared of sheeps during late- summer early autumn and was spun into
+							yarn later in the winter when farmers and workers spent most of their time indoors.
+						</p>
+
+						<p>
+							In those days wool was sheared of sheeps during late- summer early autumn and was spun into
+							yarn later in the winter when farmers and workers spent most of their time indoors.<sup><a
+									href="#fn4" id="ref4">4</a></sup>
+						</p>
+
+						<p>
+							The industrialisation of knitting devastated the hand knitters by making garments cheaper
+							and faster. It became a turning point for knitting in which it changed from a profession to
+							a hobby.
+							The reason industrialization was so devastating for kitting was the invention of the Jaquard
+							loom and other similar mechanical productions of knitted goods. The loom was invented by
+							Joseph-Marie Jacquard, a french merchant and weaver. With his loom it was possible for
+							unskilled workers to weave complex patterns in a matter of minutes which took skilled
+							workers to do manually much longer. This affected the method and prices of garments making
+							them cheaper in the process. Making expensive sought after patterns aquireable by lower
+							classes. The groundbreaking element of the loom were its punch cards which made it possible
+							to switch between raising and lowering the warp much quicker than before. This technology
+							was referenced in the book <em>“Sketch of The Analytical Engine Invented by Charles
+								Babbage”</em> where Ada Lovelace a british mathematician compares Babbage’s engine to
+							the Jaquard’s loom
+						</p>
+
+						<div class="quote">
+							<p>
+								The Analytical Engine weaves algebraic patterns, just as the Jacquard loom weaves
+								flowers and leaves. <br> Ada Lovelace, mathematician (1843)
+
+							</p>
+						</div>
+						<p>
+							She makes the observation due to both machines using punching cards. However, in Babbage’s
+							case, he uses them not as input for patterns but for numbers. Even though the Analytical
+							Engine never became fully realised the same principles were used in today's computers. Using
+							binary language to calculate complex problems.
+						</p>
+					</div>
+					<div class="rellax" data-rellax-speed="0.5" data-rellax-percentage="1">
+						<div class="footnotes" id="f1">
+							<div class="footnote-container">
+								<div class="footnote">
+									<sup id="fn1">1. Rutt, Richard. A Rhistory of knitting.<a href="#ref1"
+											title="Jump back to footnote 1 in the text.">↩</a></sup>
+								</div>
+								<div class="fsootnote">
+									<sup id="fn2">2. Rutt, Richard. A history of knitting.<a href="#ref2"
+											title="Jump back to footnote 1 in the text.">↩</a></sup>
+								</div>
+								<div class="footnote">
+									<sup id="fn3">3. Rutt, Richard. A history of knitting.<a href="#ref3"
+											title="Jump back to footnote 1 in the text.">↩</a></sup>
+								</div>
+								<div class="footnote">
+									<sup id="fn4">4. Rutt, Richard. A history of knitting.<a href="#ref4"
+											title="Jump back to footnote 1 in the text.">↩</a></sup>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- CHAPTER 2 -->
+				<div class="rellax" data-rellax-speed="-3" data-rellax-percentage="1" data-rellax-zindex="5">
+
+					<img class="chapter-image" src="content/images/chapter_two" alt="c2">
+
+				</div>
+
+				<div class="chapter" id="c2">
+					<div class="footnotes" id="f2">
+						<div class="footnote-container">
+							<div class="footnote">
+								<sup id="fn1">1. Rutt, Richard. A history of knitting.<a href="#ref1"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+							<div class="footnote">
+								<sup id="fn2">2. Rutt, Richard. A history of knitting.<a href="#ref2"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+							<div class="footnote">
+								<sup id="fn3">3. Rutt, Richard. A history of knitting.<a href="#ref3"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+							<div class="footnote">
+								<sup id="fn4">4. Rutt, Richard. A history of knitting.<a href="#ref4"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+						</div>
+					</div>
+
+					<div class="text" id="chapter-2">
+						<h2 class="subtitle">II<br> Seeing a Pattern</h2>
+
+						<p>
+							The reason industrialization was so devastating for kitting was the invention of the Jaquard
+							loom and other similar mechanical productions of knitted goods. The loom was invented by
+							Joseph-Marie Jacquard, a french merchant and weaver. With his loom it was possible for
+							unskilled workers to weave complex patterns in a matter of minutes which took skilled
+							workers to do manually much longer. This affected the method and prices of garments making
+							them cheaper in the process. Making expensive sought after patterns aquireable by lower
+							classes. The groundbreaking element of the loom were its punch cards which made it possible
+							to switch between raising and lowering the warp much quicker than before. This technology
+							was referenced in the book <em>“Sketch of The Analytical Engine Invented by Charles
+								Babbage”</em> where Ada Lovelace a british mathematician compares Babbage’s engine to
+							the Jaquard’s loom
+							Despite the innovation of the knitting machine, people still knitted by hand, even today.
+							The machine managed to turn this once powerful asset into a pass-time and hobby. Knitting is
+							a calming repetitive job made easy with a set of instructions. These instructions go row by
+							row, explaining which knit needs to be knitted or in which colour. Most often it is
+							<em>“plain”</em> and a <em>“purl”</em> which are represented with the letters “K” for plain
+							knit and “P” for purl knit. When knitting with colours often the primary colour will be
+							mentioned as “MC” as in ‘Main Colour’ and the secondary colour as “CC” or “Contrast-
+							Colour”. These pieces of information are often depicted in rows as rounds on paper. Like
+							this scarf pattern:
+						</p>
+
+						<p>
+							Round 1: *With Main Color (MC), k1; with CC, k7, repeat from * to end of round.<br>
+							Round 2: With CC, knit to end of round.<br>
+							Round 3: *With CC, k4; with MC, k1; with CC, k7; with MC, k1; with CC, k3, repeat from * to
+							end of round.<br>
+							*note the number after the “k” indicates the number of knits that need to be performed. <br>
+						</p>
+
+						<p>
+							This can be correlated to the word algorithm in the context of computers, which is usually a
+							set of instructions that a computer needs to follow. This practice is not too far off from a
+							simple knitting pattern. When writing a program the computer must follow a set of
+							instructions line by line to complete it.
+						</p>
+
+						<p id="code">
+							A simple C++ code to print out “Hello World!”<br>
+							#include <iostream><br>
+								int main() {<br>
+								std::cout << "Hello World!" <br>
+									return 0;<br>
+									}<br>
+						</p>
+
+						<div class="imgpar">
+							<div class="imginpar">
+								<div class="rellax" data-rellax-speed="-3" data-rellax-percentage="1" data-rellax-mobile-percentage="0.1"
+									data-rellax-zindex="5" data-rellax-mobile-speed="-1">
+									<img src="content/images/image0.png" alt="recipie">
+									<figcaption>Fig.1 - Selburose found in an Icelandic knitting magazine.</figcaption>
+								</div>
+							</div>
+							<div class="textinpar">
+								<p>
+									The set of instructions to knit and code are not the only thing they have in common.
+									There are countless knitting magazines that have been produced in Iceland and when
+									looking at an illustration of a knitting pattern they are usually depicted on a grid
+									sheet of paper with each square filled either black or white depending on where MC
+									or CC should go. As seen in fig X depicts a mitten pattern found in the knitting
+									magazine “Hugur og Hönd” with a common knitting pattern called the Selburose. This
+									binary depiction of the pattern can easily be interpreted as pixels on a screen made
+									by a coded program.
+								</p>
+								<p>
+									The use of code in art can be put into two categories - none of which is lesser than
+									the other. They are production and conception. Back in the 19th-century production
+									was the main focus of machines but as they evolved into home computers their skills
+									broadened towards conception, or forming an idea. This view was best captured by the
+									words of A. Micheal Noll “an intellectual and active creative partner that when
+									fully exploited could be used to produce wholly new art forms and possibly new
+									aesthetic experiences”. He compares the computer to a partner in which new
+									territories in the art can be explored, broadening our forms of expression through
+									art.
+								</p>
+							</div>
+
+
+						</div>
+						<div class="imgpar">
+							<div class="imginpar">
+
+								<div class="rellax" data-rellax-speed="-5" data-rellax-percentage="1" data-rellax-mobile-percentage="0"
+									data-rellax-zindex="5" data-rellax-mobile-speed="-0.1" data-rellax-mobile-percentage="0.1">
+									<img src="content/images/image1.png" alt="computer">
+									<figcaption>Fig.2 - Computer-generated knitting pattern where the input is the
+										binary translation of the word "Selburose"</figcaption>
+								</div>
+							</div>
+
+							<div class="textinpar">
+								<p>
+									Because of the computers inherent capability of being able to perform the same
+									calculations over and over again displaying the output in a binary - pixel like
+									output imitating a knitting pattern. By creating a program that generates knitting
+									patterns based on an l-system - , recursion and mirroring pixels it is possible to
+									generate countless variations. It is important to be clear here. In reality the
+									program’s output is actually a motif which is the fundamental building block of a
+									pattern, without a motif, there is no pattern. It is not until you repeat that motif
+									multiple times when a pattern emerges. With every pattern there needs to be an input
+									in binary, or 1 and 0. This input can be random however it can also be based on any
+									character encoding that uses binary input, for example like the ASCII binary
+									alphabet. That type of code can be described as transcoding. Where one type of
+									digital material is converted into another.
+								</p>
+
+								<p>
+									With this new found way of transcoding information into a motif it is curious to
+									compare a well known knitting pattern with its computer generated counterpart. When
+									the input is “Selburose” the output is not the selburose people have learned to knit
+									and love for centuries but the program’s interpretation or representation of the
+									word. The “eight leaf-rose”- which it is also known as - gets its name from the town
+									of Selbu located in Norway where in 1851 a young girl named Marit Guldsetbrua Emstad
+									knitted a pair of mittens for her church and on the back palm had the rose decorated
+									in black and white. This pattern became an instant hit among the townsfolk and it is
+									said to have gained popularity in knitting around the world thanks to Selbu - and
+									Norway's - export of knitted goods. This story is most often associated with the
+									selburose’s rise to fame however it is not the pattern's origin. It is depicted in
+									the book “Sjónabókin - Icelandic Patterns and Ornaments” which holds patterns and
+									ornaments found in Iceland since the 16th century including the Selburose, which
+									predates the one made in 1851. The earliest example of this geometric octagram is in
+									the archive of the British Museum; there are many instances of the Selburose in
+									different variations, cultures, context and material, however, the oldest example
+									found was dated 2000 BC - 1000 BC and can be found on a stamp seal from the
+									Mesompotamian era. Stamp seals were usually made to leave an impression on wet clay
+									for storytelling purposes and the rose is depicted in a landscape setting most
+									possibly representing a star rather than a rose. A more recognisable and geometric
+									form of the Selburose can be found on a sheath found in Britain during the Roman
+									Empire rule in mid 1st century BC. In that instance it is easy to presume that it is
+									as well trying to depict a star rather than a rose. The sheath has two circular
+									decorations above and below it and the description mentions a <span
+										style="font: var(--font-size-head) var(--font-family);  font-weight: 400; font-style: italic;font-size: var(--font-size-body);">“crescent
+										moon”</span> on the upper panel. Strengthening the belief that it represents a
+									star.
+								</p>
+							</div>
+
+
+
+						</div>
+
+						<p>
+							Despite the rose’s lack of cultural and historical meaning it is still knitted today with
+							many people connecting it with Christmas, winter or even the country of Norway.
+						</p>
+
+						<p>
+							Following the red thread of the history of the Selburose there is no clear or true origin to
+							this form which could be for its simple shape, geometric element and variety. It has
+							survived through the decades and can be found on sweaters, socks, hat and scarfs everywhere
+							despite lacking any cultural meaning. Going back to the computer-generated selburose could
+							the same thing accur? Is there a difference between computer-generated patterns and ones
+							made by humans?
+						</p>
+
+						<p>
+							When knitting with two colours it is easy to make repetitive patterns. These first patterns
+							made by humans are mostly based on their surroundings and object which were beautiful for
+							them, so there is no wonder why most patterns, ornaments and motifs are based on nature,
+							plants, flowers and even stars. Perhaps it is because of nature’s inherent beauty and
+							ever-changing seasons. However, rarely is nature as structured as most knitting patterns, so
+							some human intervention for rule and order is implemented.
+						</p>
+
+						<p>
+							When the selburose is put alongside the computer-generated selburose there is a stark
+							difference in appearance. One was drawn for many centuries changing little over time and the
+							other was generated from 1s and 0s in milliseconds. Which one is more valuable?
+						</p>
+
+						<p>
+							When something is made by the computer there is almost an urge to mention it in advance. As
+							if there is something to excuse when it has gone through the digital process. Like it is
+							somehow lesser than what the human hand can reproduce.
+						</p>
+
+						<p>
+							Why is that?
+						</p>
+					</div>
+				</div>
+
+				<!-- CHAPTER 3 -->
+
+				<img class="chapter-image" src="content/images/chapter_three" alt="c3">
+
+				<div class="chapter" id="c3">
+
+					<div class="footnotes">
+						<div class="footnote-container">
+
+							<div class="footnote">
+								<sup id="fn1">1. Rutt, Richard. A history of knitting.<a href="#ref1"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+							<div class="footnote">
+								<sup id="fn2">2. Rutt, Richard. A history of knitting.<a href="#ref2"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+							<div class="footnote">
+								<sup id="fn3">3. Rutt, Richard. A history of knitting.<a href="#ref3"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+							<div class="footnote">
+								<sup id="fn4">4. Rutt, Richard. A history of knitting.<a href="#ref4"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+						</div>
+					</div>
+
+					<div class="text" id="chapter-3">
+
+						<h2 class="subtitle" id="chapter-3">III<br> C'est ne pas une rose</h2>
+
+						<div class="quote">
+							<p>
+								“Form which is not taken from natural objects are ugly”,
+							</p>
+						</div>
+						<p>
+							These are the words written by the English writer John Ruskin. Born in 1819 he was
+							associated with the arts and crafts movement. The movement focused on reforming design and
+							decoration as a counter-movement towards rapid industrialisation. William Morris - another
+							follower of the movement - continues in his text to argue the increased profit greed and
+							less attention to detail will result in the overall quality of a work being diminished. This
+							was also expanded by William Morris in his paper “Hope and Fears of Art” saying
+							“...everything made by man’s hands has a form, which must be either beautiful or ugly;
+							beautiful if it is in accord with Nature, and helps her; ugly if it is discordant with
+							Nature, and thwarts her; it cannot be indifferent…” It is hard to argue that the machine is
+							in fact natural due to its many mystical properties and Morris’ words seem to suggest that
+							the machine and therefore computers will never make beautiful art because of their lack of
+							connection towards nature.
+
+						</p>
+
+						<p>
+							The industrial revolution had the beneficial effect that clothes, furniture and other status
+							symbols became ever more acquirable for the lower- and middle-class citizens. These new
+							productions however lacked in quality, so much so that Alexis de Tocquville wrote in 1812
+							about the effect of workmanship made by Percier and Fontaine “a look of brilliance
+							unannounced to its true worth” “appear as something he is not” which sheds a light that
+							machine-made decorations are inherently ugly.
+
+						</p>
+
+						<p>
+							However, that does not diminish the machine's potential. As Frank Lloyd Wright, mostly known
+							as an architect, indicates in his essay from 1901. He mostly criticised Morris for his
+							narrow view on machines and tries to highlight its benefits for human labour, innovation and
+							the future. Using the printer as an example, which in many ways is a machine, calling it the
+							first great machine after a great city. The machine, Wright writes, is a “tool which frees
+							human labour, lengthens and broadens the life of the simplest man.” By that, he means that
+							the machine should be looked at as a tool to aid persons in their projects. He goes on
+							saying that in every age there have been tools which humans have used freely to express
+							themselves in art “…the tool most successful in saving the most precious thing in the world
+							- human effort”. This can be compared to today’s use of computers, where we have found ways
+							to simplify otherwise complex and repetitive tasks, saving both time and energy with the
+							added benefit of making it more accessible for a greater number of people.
+
+						</p>
+
+						<div class="rellax" data-rellax-speed="0.2" data-rellax-percentage="1" data-rellax-zindex="">
+							<img src="content/images/kb_1.jpeg" width="300vw">
+							<figcaption>Plants generated by "Bio-Morphosis" - Stanislas Chaillou</figcaption>
+						</div>
+
+						<div class="imgpar">
+							<div class="rellax" data-rellax-speed="5" data-rellax-percentage="1" data-rellax-zindex="">
+								<div class="imginpar">
+									<img src="content/images/flower_ai.gif" alt="bio" width="300vw">
+								</div>
+							</div>
+							<div class="textinpar">
+
+								<p>
+									This view of the machine still echoes until this day. With the development of tools
+									such as artificial intelligence, some computer scientists have made a program that
+									generates paintings based on various styles found in museums around the world, for
+									example landscapes, portraits and still life. Alumni at the The Art & AI Laboratory
+									in Rutgers University are behind the developments. Their conclusion was “The system
+									was evaluated by human subject experiments which showed that human subjects
+									regularly confused the generated art with the human art, and sometimes rated the
+									generated art higher on various high-level scales.” However they did note that “…it
+									[the computer] does not have any semantic understanding of art behind the concept of
+									styles.” Leaving all the art open for interpretation by the humans observing it.
+									Without semantics it is hard to have a meaningful discussion about art. When
+									observing the portrait section of the generated art there is an eerie feel to it,
+									almost uncanny they look almost as half melted ghost screaming for their lives,
+									frozen in the painted frame forever. It is hard not to think about the Arts and
+									Crafts Movement quote about nature and how by imitating it through a machine it
+									therefore becomes ugly.
+
+								</p>
+								<p>
+									In his work “Bio-Morphosis” ,artist Stanislas Chaillou generated countless
+									illustrations of plants and flowers through AI, saying it “cuts across species and
+									usual classifications by transposing biomorphism into the poetic field.” Training
+									the AI to see countless illustrations made by Karl Bossfeld published in his book
+									“Urformen der Kunst” from 1928. The result are flowers never before seen by the
+									human eye, something that nature could never produce. By not knowing the fundamental
+									law of nature the AI is in position to break free from convention and create
+									something completely original. However none of these are roses. Only the computer's
+									interpretation of what data they were fed.
+
+								</p>
+								<p>
+									There is however financial interest in art made by computers as demonstrated by the
+									collective named Obvious. The artwork named “Portrait of Edmond Belamy” generative
+									Adversarial Network print, on canvas. Which sold for $432,500 but its estimated
+									price was only $7,000 - $10,000
+
+								</p>
+							</div>
+						</div>
+						<div class="imgpar">
+							<div class="imginpar">
+								<div class="rellax" data-rellax-speed="5" data-rellax-percentage="1"
+									data-rellax-zindex="">
+
+									<img src="content/images/image2.jpg" alt="recipie" width="300vw">
+								</div>
+							</div>
+							<div class="textinpar">
+
+								<p>
+									However, making art with the machine or computers which does not try to emulate
+									nature but create new perspectives is perfectly illustrated in the artwork
+									Fragmented Memory (2013) by <a href="https://phillipstearns.com/"> Phillip David
+										Stearns</a>. This triptych woven artworks made from Stearns computer’s physical
+									memory and woven at the TextileMuseum Tilburg memorialise his computer’s data in
+									fabric. It divides the data into 6 bits which is then assigned a RGB colour value -
+									transcoding the data into colours. On the back there is the key to the encryption
+									which in theory would make it possible to decode the information presented on the
+									front of the fabric.
+
+								</p>
+
+								<!-- <img src="content/images/frag_pro.gif" alt="frag" > -->
+
+								<p>
+									“Textiles have long been used as a medium for imagery but are also closely connected
+									to the development of automation and computer technology. Fragmented Memory
+									collapses these two histories, functioning as a visual and physical medium for the
+									storage and transmission of digital information.”
+
+								</p>
+							</div>
+						</div>
+						<p>
+							<a href="https://www.newrafael.com/">Rafaël Rozendaal</a> is a Dutch-Brazilian visual artist
+							currently working in New York. In his work “Abstract Browsing” Rozendaal explores the
+							abstraction of a common computer-browser by using a plug-in. When activated the browser
+							becomes a random collection of colourful rectangles. “It shows you the skeleton of the web.
+							It’s like seeing an X-ray of a building, showing the structural elements.” Since computers,
+							phones and other electronics have become such an integrated part of our lives there is full
+							reason to speculate how to preserve all this information. The obvious solution is to copy
+							everything and store it in a safe place but it’s quite unpredictable how long this data will
+							last.
+
+						</p>
+						<img src="content/images/abstract-twitter.gif" alt="recipie" width="100%">
+						<div class="imgpar">
+							<div class="imginpar">
+
+								<img src="content/images/abstract_browsing2.gif" alt="recipie" >
+								<img src="content/images/Abstract Browsing 15 05 02 (Gmail), 266 x 144 cm..jpeg"
+									alt="gmail">
+								<figcaption>Abstract Browsing 15 05 02 (Gmail), 266 x 144 cm - Wowen Tapestry
+								</figcaption>
+							</div>
+							<div class="textinpar">
+								<p>
+									By allowing the computer to determine the outcome of the piece with a common
+									language and medium that both computers and humans could understand, Stearns manages
+									to bridge the gap between humans and machines. This steers away from the shallow
+									re-creations of the CAN program. This way of looking at computers and arts could be
+									compared with the “truth of material” a principle by Redgraves which believes that
+									the innate qualities of the materials should influence the projects created from
+									them. By allowing the computer to produce the art it wants we can start to see it
+									from a conceptual art point of view. In conceptual art, the idea or concept coupled
+									with the artwork is seen as the most important aspect of the artwork
+
+								</p>
+
+								<p>
+									“When an artist uses a conceptual form of art, it means that all of the planning and
+									decisions are made beforehand and the execution is a perfunctory affair. The idea
+									becomes a machine that makes the art.”
+
+								</p>
+
+								<p>
+									In his text “Art after Philosophy” Joseph Kosuth writes about aesthetics “it’s
+									important to separate aesthetics from art because aesthetics deals with opinions and
+									perceptions of the world in general”. He goes on to say that ornament’s main reason
+									to be is purely for aesthetic purposes, to make something look more attractive than
+									it is. Formalist criticism on art is only based on its physical attributes and
+									bypasses its conceptual element. “formalist art becomes art only by virtue of its
+									resemblance to earlier works of art ”. The artisans of the old used aesthetics as a
+									crutch to sell their art
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- CHAPTER 4 -->
+				<img class="chapter-image" src="content/images/chapter_four" alt="c4">
+
+				<div class="chapter" id="c4">
+
+					<div class="footnotes">
+						<div class="footnote-container">
+							<div class="footnote">
+								<sup id="fn1">1. Rutt, Richard. A history of knitting.<a href="#ref1"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+							<div class="footnote">
+								<sup id="fn2">2. Rutt, Richard. A history of knitting.<a href="#ref2"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+							<div class="footnote">
+								<sup id="fn3">3. Rutt, Richard. A history of knitting.<a href="#ref3"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+							<div class="footnote">
+								<sup id="fn4">4. Rutt, Richard. A history of knitting.<a href="#ref4"
+										title="Jump back to footnote 1 in the text.">↩</a></sup>
+							</div>
+						</div>
+					</div>
+
+					<div class="text" id="chapter-4">
+
+						<h2 class="subtitle" id="chapter-4">IV<br> “A rose is a rose is a rose”</h2>
+
+						<p>
+							By approaching computer-generated art from a conceptual viewpoint it is possible to
+							experience the art in a new light. Revisiting the computer-generated pattern of the word
+							“selburose” the arrangement of pixels stops being just random but a new chapter of the rose
+							life. Stripping away the cultural heritage, the empty meaning behind the original rose,
+							stripping the aesthetics formalist meaningless purpose of art the computer-generated pattern
+							become something else.
+
+						</p>
+						<p>
+							When looking at the computer-generated rose and the original selburose as equals it is easy
+							to appreciate the original rose more. It is something familiar, something seen for thousands
+							of years, and before that its shape was seen in nature itself. Humans are conditioned to
+							like the things which seem familiar to them, and therefore dislike what seems unfamiliar.
+							But when looking at the roses, not as different faces on the same coin but two different
+							coins from two different currencies it’s easier to appreciate each one on their own, and for
+							what they hold. The selburose has its culture, aesthetics and its beauty and comfort can be
+							found from its familiarity and history and its endless appreciation from countless cultures.
+							The computer-generated selburose can be appreciated by its conceptual elements. The
+							fasciation of human innovation in machinery, the almost mythical properties of the computer.
+							The common language of knitting and code.
+
+						</p>
+					</div>
+				</div>
+
+				<!-- Bibliography -->
+				<img class="chapter-image" src="content/images/Bibliography_gif" alt="c1">
+
+				<div class="bio">
+
+
+					<h2 class="subtitle" id="Bibliography">Bibliography</h2>
+
+					<p>
+						<li>
+							Gombrich, E. H.,. The Sense of Order: A Study in the Psychology of Decorative Art. Phaidon
+							Press, 2002
+						</li>
+						<li>
+							Geirfinnsdóttir, Birna. Magnússon, Guðmundur Oddur. Íslenska Sjónabókin: Ornaments and
+							Patterns found in Iceland. Heimilisiðnaðarfélag Íslands, 2016
+						</li>
+						<li>
+							Reas, Casey. McWilliams, Chandler. Form + Code in design, art, and architecture, Princeton
+							Architectural Press, 2010.
+						</li>
+						<li>
+							Kosuth, Joseph. Art after philosophy and after. MIT PRESS, 1991
+						</li>
+						<li>
+							Alberro, Alexander. Stimson, Blake. “Paragraphs on conceptual art.” Conceptual Art: A
+							Critical Anthology. The MIT Press, 1999
+						</li>
+						<li>
+							Elgammal, Ahmed. Liu, Bingchen. Elhoseiny, Mohamed. Mazzone, Marian. CAN: Creative
+							Adversarial Networks Generating “Art” by Learning About Styles and Deviating from Style
+							Norms. Rutgers University, 2017
+						</li>
+						<li>
+							Morris, William. HOPES & FEARS FOR ART. FIVE LECTURES BY WILLIAM MORRIS. LONGMANS, GREEN,
+							AND CO. 1919
+						</li>
+						<li>
+							Wright, Frank Lloyd. The Art and Craft of the Machine. National League of Industrial Art,
+							1902.
+						</li>
+						<li>
+							William Morris - The Revival of Handicraft
+						</li>
+						<li>
+							Sarappo, E. (2018, November 25). The star of Norwegian knitwear. The Atlantic. Retrieved
+							January 24, 2022, from
+							https://www.theatlantic.com/technology/archive/2018/11/origins-famous-norwegian-knitting-pattern/576502/
+						</li>
+						<li>
+							Hamlyn, Paul. Early Decorative Textiles. The Hamlyn Publishing Group Limited, 1969.
+						</li>
+						<li>
+							Stamp-seal: British museum. The British Museum. (n.d.). Retrieved January 24, 2022, from
+							https://www.britishmuseum.org/collection/object/W_1925-0613-3
+						</li>
+						<li>
+							sheath: British museum. The British Museum. (n.d.). Retrieved January 24, 2022, from
+							https://www.britishmuseum.org/collection/object/H_1892-0901-1212
+						</li>
+						<li>
+							Rutt, Richard. A history of knitting. Interweave Press 1987.
+						</li>
+						<li>
+							February 6, 2019 | P. B. (2019, February 6). Falling Snow Scarf. Purl Soho Falling Snow
+							Scarf Comments. Retrieved
+							January 24, 2022, from https://www.purlsoho.com/create/2019/02/06/falling-snow-scarf/
+						</li>
+						<li>
+							Jasia Reichardt, Cypernetics, art and ideas (New York: New York Graphic Sciety, 1971), 143.
+						</li>
+						<li>
+							Rozendaal, Rafaël. “Abstract Browsing”. 2014
+							https://www.newrafael.com/notes-on-abstract-browsing/ Acessed 20 February 2022.
+						</li>
+						<li>
+							Tómasson, Þórður.”Teygjast lét ég lopann minn” Hugur og hönd, vol. 2, no. 1, 1967, pp 12-15.
+						</li>
+						<li>
+							Axeldóttir, Kristín. Prjón á Íslandi. 2021. University of Iceland.
+						</li>
+						<li>
+							Sarappo, Emma. “The Star of Norwegian Knitwear.” The Atlantic, 25 November 2018,
+							https://www.theatlantic.com/technology/archive/2018/11/origins-famous-norwegian-knitting-pattern/576502/.
+							Accessed 20 February 2022.
+						</li>
+						<li>
+							Discovering Patterns. Burnford, Paul. Stoops, Jack. CBS INC, 1964.
+						</li>
+						<li>
+							Chaillou, Stanislas. “Bio-Morphosis” http://stanislaschaillou.com/biomorphosis.html#_1.
+							Accessed 20 February 2022
+						</li>
+						<li>
+							Vincent, James. “Christie’s sells its first AI portrait for $432,500, beating estimates of
+							$10,000.” The Verge. 25 October 2018,
+							https://www.theverge.com/2018/10/25/18023266/ai-art-portrait-christies-obvious-sold.
+							Accessed 20 February 2022
+						</li>
+					</p>
+				</div>
+			</div>
+	</div>
+
+	</main>
+
+	</div>
+	</div>
+
+	<footer>
+
+		<hr>
+
+		<p>
+			Last edit date: 09/03/2022
+		</p>
+
+	</footer>
+
+	<!-- end webpage content -->
+
+
+
+</body>
+
+</html>
