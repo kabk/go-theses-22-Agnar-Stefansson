@@ -1,3 +1,3 @@
-# A boilerplate template with 'boilerplate' CSS
+#This is my Thesis website for KABK Spring 2022
 
-Somewhat 'default' styling
+Made by Agnar Freyr Stefánsson
