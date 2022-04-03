@@ -17,7 +17,7 @@ $( document ).ready( function( ) {
 	function updateScroll( ) {
 
 		// footnotes only turn (in)visible while scrolling on smaller screens (<= 773px)
-		if ( window.innerWidth <= 773 ) {
+		if ( window.innerWidth <= 1000 ) {
 
 			// determine which chapter is scrolling into view
 			let activechapter = -1;
@@ -42,11 +42,11 @@ $( document ).ready( function( ) {
 				anchors.forEach( function( anchor ) {
 				
 					// STYLES FOR TESTING PURPOSES
-					// anchor.style.paddingLeft = '10px';
-					// anchor.style.paddingRight = '10px';
-					// anchor.style.fontSize = '40px';
-					// anchor.style.color = 'white';
-					// anchor.style.backgroundColor = 'red';
+// 					anchor.style.paddingLeft = '10px';
+// 					anchor.style.paddingRight = '10px';
+// 					anchor.style.fontSize = '40px';
+// 					anchor.style.color = 'white';
+// 					anchor.style.backgroundColor = 'red';
 				
 					const anchor_rect = anchor.getBoundingClientRect( );
   
@@ -54,14 +54,19 @@ $( document ).ready( function( ) {
 					const footnoteid = anchor.attributes.href.value;
 					const footnote = activechapter.querySelector( ':scope .footnote' + footnoteid );
 
-					// check if anchor is in view
-					if ( anchor_rect.top < window.innerHeight - 76 && anchor_rect.top >= 0 ) {
-						footnote.style.display = 'inline-block';
+					// check if footnote exists
+					if ( footnote ) {
+					
+						// check if anchor is in view
+						if ( anchor_rect.top < window.innerHeight - 76.5
+						  && anchor_rect.bottom >= navbar.offsetHeight ) {
+							footnote.style.display = 'inline-block';
 						
-						num_visible_anchors ++;
-					} else {
-						// if invisible hide matching footnote
-						footnote.style.display = 'none';
+							num_visible_anchors ++;
+						} else {
+							// if invisible hide matching footnote
+							footnote.style.display = 'none';
+						}
 					}
 				} );
 				
@@ -76,7 +81,7 @@ $( document ).ready( function( ) {
 			
 		} else {
 		
-			// if screenwidth >= 774px,
+			// if screenwidth >= 780px,
 			// get and show all footnotebars and footnotes
 			
 			const footnotebars = document.querySelectorAll( '.footnotes' );
